@@ -54,6 +54,7 @@ public class OTSubscriberLayout extends FrameLayout{
                     ((GLSurfaceView) mSubscriber.getView()).setZOrderOnTop(true);
                 }
             }
+            ((GLSurfaceView) mPublisher.getView()).setZOrderMediaOverlay(false);
             ConcurrentHashMap<String, FrameLayout> mSubscriberViewContainers = sharedState.getSubscriberViewContainers();
             mSubscriberViewContainers.put(streamId, mSubscriberViewContainer);
             addView(mSubscriberViewContainer, 0);

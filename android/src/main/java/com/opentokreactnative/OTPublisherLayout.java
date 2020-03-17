@@ -51,6 +51,7 @@ public class OTPublisherLayout extends FrameLayout{
             }
             ConcurrentHashMap<String, FrameLayout> mPublisherViewContainers = sharedState.getPublisherViewContainers();
             mPublisherViewContainers.put(publisherId, mPublisherViewContainer);
+            ((GLSurfaceView) mPublisher.getView()).setZOrderMediaOverlay(true);
             addView(mPublisherViewContainer, 0);
             mPublisherViewContainer.addView(mPublisher.getView());
             requestLayout();
